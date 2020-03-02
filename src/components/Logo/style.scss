@@ -1,0 +1,9 @@
+@import '../../variables.scss';
+
+.logo {
+  height: 50px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
