@@ -1,0 +1,61 @@
+@import '../../variables.scss';
+
+.home {
+  h1 {
+    font-size: 48px;
+  }
+  
+  h2 {
+    font-size: 40px;
+    line-height: 135%;
+  }
+  
+  p {
+    font-size: 20px;
+    line-height: 150%;
+  }
+  
+  .ctaLink {
+    display: inline-block;
+    padding: 2rem 0;
+    font-size: 20px;
+    color: $blue;
+    font-weight: 600;
+  
+    a {
+      color: $blue;
+      text-decoration: none;
+    }
+  
+    .arrow {
+      display: inline-block;
+      margin-right: 10px;
+      transition: all 0.5s;
+    }
+  
+    .underline {
+      display: block;
+      width: 0%;
+      height: 2px;
+      transition: all 0.5s;
+    }
+  
+    &:hover {
+      cursor: pointer;
+  
+      .arrow {
+        transform: translateX(12px);
+        transition: all 0.5s;
+      }
+  
+      .underline {
+        display: block;
+        width: calc(100% - 24px);
+        height: 2px;
+        background-color: $blue;
+        transform: translateX(26px);
+        transition: all 0.5s;
+      }
+    }
+  }
+}
