@@ -1,18 +1,28 @@
 @import '../../variables.scss';
 
 .home {
+  margin-top: 5vmin;
+
   h1 {
     font-size: 48px;
+    opacity: 0;
+    animation: fadeIn 1.25s ease-out forwards;
   }
   
   h2 {
-    font-size: 40px;
+    font-size: 36px;
     line-height: 135%;
+    opacity: 0;
+    animation: fadeIn 1.25s ease-out forwards;
+    animation-delay: 0.5s;
   }
   
   p {
     font-size: 20px;
     line-height: 150%;
+    opacity: 0;
+    animation: fadeIn 1.25s ease-out forwards;
+    animation-delay: 1s;
   }
   
   .ctaLink {
@@ -21,6 +31,9 @@
     font-size: 20px;
     color: $blue;
     font-weight: 600;
+    opacity: 0;
+    animation: fadeIn 1.25s ease-out forwards;
+    animation-delay: 1.5s;
   
     a {
       color: $blue;
@@ -57,5 +70,12 @@
         transition: all 0.5s;
       }
     }
+  }
+
+  // CSS for fade in
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(250px); }
+    30% { opacity: 0 }
+    100% { opacity: 1; transform: translateY(0px); }
   }
 }
