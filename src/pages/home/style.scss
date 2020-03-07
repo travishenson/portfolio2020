@@ -14,7 +14,7 @@
     line-height: 135%;
     opacity: 0;
     animation: fadeIn 1.25s ease-out forwards;
-    animation-delay: 0.5s;
+    animation-delay: 1s;
   }
   
   p {
@@ -22,7 +22,7 @@
     line-height: 150%;
     opacity: 0;
     animation: fadeIn 1.25s ease-out forwards;
-    animation-delay: 1s;
+    animation-delay: 1.75s;
   }
   
   .ctaLink {
@@ -33,7 +33,7 @@
     font-weight: 600;
     opacity: 0;
     animation: fadeIn 1.25s ease-out forwards;
-    animation-delay: 1.5s;
+    animation-delay: 2s;
   
     a {
       color: $blue;
