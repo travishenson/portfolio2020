@@ -27,7 +27,7 @@ const About = () => {
       <h2>Outside of Development</h2>
       <p>Describing myself doesn't come easily. Outside of development and coding, I have varying interests. I've always been a passionate sports fan and closely follow soccer, basketball, and football.</p> 
       <p>Growing up with video games has made them an integral part of my personal entertainment and socialization with friends. I love the immersion of an open-world video game with great storytelling, but I still enjoy multiplayer games like Rocket League and FIFA with my friends.</p>
-      <p>In summary, I consider myself a gigantic nerd who loves technology, sports, video games, TV shows, music, and random bits of trivial information.</p>
+      <p>In summary, I consider myself a gigantic nerd who loves technology, sports, video games, TV shows, music, and random bits of trivia.</p>
     </div>
   )
 };

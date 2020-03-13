@@ -1,0 +1,22 @@
+@import '../../variables.scss';
+
+.project {
+  padding-bottom: 10vmin;
+  margin: 5vmin 0 10vmin 0;
+
+  h2 {
+    display: inline-block;
+    margin: 0;
+  }
+
+  h3 {
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: 0.5em;
+    color: $grey;
+  }
+}
+
+.project-border {
+  border-bottom: 2px solid $blue;
+}
