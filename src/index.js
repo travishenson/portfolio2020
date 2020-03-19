@@ -12,30 +12,36 @@ import Resume from './pages/resume';
 // Import universal components
 import Logo from './components/Logo';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 const App = () => {
   return (
     <Router>
-      <header>
-        <Logo />
-        <Navbar /> 
-      </header>
-      <main>
-        <Switch>
-          <Route exact path='/'>
-            <Home />
-          </Route>
-          <Route exact path='/about'>
-            <About />
-          </Route>
-          <Route exact path='/work'>
-            <Work />
-          </Route>
-          <Route exact path='/resume'>
-            <Resume />
-          </Route>
-        </Switch>
-      </main>
+      <div className='app'>
+        <header>
+          <Logo />
+          <Navbar /> 
+        </header>
+        <main>
+          <Switch>
+            <Route exact path='/'>
+              <Home />
+            </Route>
+            <Route exact path='/about'>
+              <About />
+            </Route>
+            <Route exact path='/work'>
+              <Work />
+            </Route>
+            <Route exact path='/resume'>
+              <Resume />
+            </Route>
+          </Switch>
+        </main>
+        <footer>
+          <p>This is the footer for my website.</p>
+        </footer>
+      </div>
     </Router>
   )
 }
