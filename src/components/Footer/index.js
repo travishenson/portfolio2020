@@ -5,7 +5,7 @@ import './style.scss';
 const Footer = () => {
   return (
     <footer>   
-      
+      © 2020 Travis Henson
     </footer>
   )
 };

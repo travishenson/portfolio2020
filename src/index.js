@@ -10,18 +10,14 @@ import Work from './pages/work';
 import Resume from './pages/resume';
 
 // Import universal components
-import Logo from './components/Logo';
-import Navbar from './components/Navbar';
+import Header from './components/Header';
 import Footer from './components/Footer';
 
 const App = () => {
   return (
     <Router>
       <div className='app'>
-        <header>
-          <Logo />
-          <Navbar /> 
-        </header>
+        <Header />
         <main>
           <Switch>
             <Route exact path='/'>
@@ -38,9 +34,7 @@ const App = () => {
             </Route>
           </Switch>
         </main>
-        <footer>
-          <p>This is the footer for my website.</p>
-        </footer>
+        <Footer />
       </div>
     </Router>
   )
