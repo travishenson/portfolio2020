@@ -1,0 +1,26 @@
+@use '../themes';
+@use 'variables';
+
+html {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+header, body, footer {
+  flex-shrink: 0;
+}
+
+body {
+  @include themes.theme-aware('background', 'background-color');
+  @include themes.theme-aware('color', 'text-color');
+  flex-grow: 1;
+  flex-shrink: 0;
+  margin: 0;
+  padding: 0;
+  margin: 0 auto;
+  font-family: variables.$brand-font;
+}
+
+.blueText {
+  @include themes.theme-aware('color', 'blue-text');
+}

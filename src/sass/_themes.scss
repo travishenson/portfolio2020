@@ -1,0 +1,24 @@
+@use './base/variables';
+
+$themes: (
+  light: (
+    background-color: variables.$white,
+    text-color: variables.$black,
+    blue-text: variables.$blue,
+    logo-color: variables.$black
+  ),
+  dark: (
+    background-color: variables.$black,
+    text-color: variables.$white,
+    blue-text: variables.$light-blue,
+    logo-color: variables.$white
+  )
+);
+
+@mixin theme-aware($key, $color) {
+  @each $theme-name, $theme-color in $themes {
+    .theme-#{$theme-name} & {
+      #{$key}: map-get(map-get($themes, $theme-name), $color)
+    }
+  }
+}

@@ -1,4 +1,4 @@
-@import '../../variables.scss';
+@use '../../sass/main.scss';
 
 .project {
   padding-bottom: 10vmin;
@@ -13,10 +13,10 @@
     font-weight: 400;
     font-size: 16px;
     margin-top: 0.5em;
-    color: $grey;
+    color: main.$grey;
   }
 }
 
 .project-border {
-  border-bottom: 2px solid $blue;
+  border-bottom: 2px solid main.$blue;
 }
