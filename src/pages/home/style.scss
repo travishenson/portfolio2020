@@ -40,7 +40,6 @@
     animation-delay: 1.25s;
   
     a {
-      color: blue;
       text-decoration: none;
     }
   
@@ -69,7 +68,6 @@
         display: block;
         width: calc(100% - 24px);
         height: 2px;
-        background-color: blue;
         transform: translateX(26px);
         transition: all 0.5s;
       }

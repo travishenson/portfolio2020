@@ -32,15 +32,13 @@ nav {
       display: block;
       width: 100%;
       height: 2px;
-      background-color: main.$blue;
+      // background-color: main.$blue;
       transition: all 0.75s;
     }
   }
 }
 
 .activeNavLink {
-  color: main.$blue;
-
   .underline {
     display: block;
     width: 100%;

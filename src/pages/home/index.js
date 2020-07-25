@@ -21,8 +21,8 @@ const Home = () => {
           <p>When I'm not coding, I enjoy watching sports of all kinds, playing video games on my PS4 and custom-built PC, discovering new music on Spotify, and binging great TV shows with my wife.</p>
           <div className='ctaLink'>
             <Link to='/work'>
-              <span className='arrow'>&gt;</span> View My Work
-              <span className='underline'></span>
+              <span className='arrow blueText'>&gt;</span> View My Work
+              <span className='underline blueText'></span>
             </Link>
           </div>
         </div>

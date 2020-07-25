@@ -1,0 +1,46 @@
+@use '../themes';
+@use 'variables';
+
+html {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+header, body, footer {
+  flex-shrink: 0;
+}
+
+body {
+  @include themes.theme-aware('background', 'background-color');
+  @include themes.theme-aware('color', 'text-color');
+  @include themes.transition(all 0.5s ease 200ms);
+  font-family: variables.$brand-font;
+  flex-grow: 1;
+  flex-shrink: 0;
+  margin: 0;
+  padding: 0;
+  margin: 0 auto;
+}
+
+a {
+  @include themes.theme-aware('color', 'text-color');
+
+  &:hover {
+    @include themes.theme-aware('color', 'text-color');
+  }
+
+  .underline {
+    @include themes.theme-aware('background-color', 'text-color');
+  }
+}
+
+.blueText {
+  @include themes.theme-aware('color', 'blue-text');
+  @include themes.transition(all 0.5s ease 200ms);
+}
+
+.logo {
+  @include themes.theme-aware('fill', 'logo-color');
+  @include themes.theme-aware('stroke', 'logo-color');
+  @include themes.transition(all 0.5s ease 200ms);
+}
