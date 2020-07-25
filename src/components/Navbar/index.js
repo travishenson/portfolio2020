@@ -4,16 +4,16 @@ import './style.scss';
 
 const Navbar = () => {
   return (
-    <nav>
-      <NavLink to='/about' exact className='navLink' activeClassName='activeNavLink'>
+    <nav className='desktopNav'>
+      <NavLink to='/about' exact className='desktopNavLink' activeClassName='activeNavLink'>
         About
         <span className='underline'></span>
       </NavLink>
-      <NavLink to='/work' exact className='navLink' activeClassName='activeNavLink'>
+      <NavLink to='/work' exact className='desktopNavLink' activeClassName='activeNavLink'>
         Work
         <span className='underline'></span>
       </NavLink>
-      <NavLink to='/resume' exact className='navLink' activeClassName='activeNavLink'>
+      <NavLink to='/resume' exact className='desktopNavLink' activeClassName='activeNavLink'>
         Resume
         <span className='underline'></span>
       </NavLink>

@@ -1,0 +1,117 @@
+@use '../../sass/main.scss';
+
+label input { display: none; }
+
+label input:checked {
+  + .menu {
+    box-shadow: 0 0 0 100vw main.$blue, 0 0 0 100vh main.$blue;
+    border-radius: 0;
+  }
+
+  + .menu .hamburger {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  + .menu .hamburger:before {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    top: 0;
+  }
+
+  + .menu .hamburger:after {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    bottom: 0;
+  }
+
+  + .menu + nav { 
+    opacity: 1 ;
+    -webkit-transition: 0.25s ease-in;
+    transition: 0.25s ease-in;
+    transition-delay: 0.25s;
+  }
+}
+
+label .menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  z-index: 2;
+  width: 75px;
+  height: 75px;
+  background: main.$blue;
+  border-radius: 50%;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  box-shadow: 0 0 0 0 main.$blue, 0 0 0 0 main.$blue;
+  cursor: pointer;
+}
+
+label .hamburger {
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background: main.$white;
+  display: block;
+  -webkit-transform-origin: center;
+  transform-origin: center;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+
+  &:before {
+    top: -10px;
+  }
+
+  &:after {
+    bottom: -10px;
+  }
+
+  &:before, &:after {
+    -webkit-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: main.$white;
+  }
+}
+
+label nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 200;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  -webkit-transition: 0.25s ease-in;
+  transition: 0.25s ease-in;
+}
+
+.mobileNavLink {
+  letter-spacing: 1px;
+  font-size: 32px;
+  text-decoration: none;
+
+  &:not(:first-child) {
+    margin-top: 25px;
+  }
+}
+
+.activeNavLink {
+  .underline {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: main.$white;
+  }
+}
