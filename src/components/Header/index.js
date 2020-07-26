@@ -3,14 +3,14 @@ import './style.scss';
 
 import Logo from '../Logo';
 import Navbar from '../Navbar';
-import CircleNav from '../CircleNav';
+import MobileNav from '../MobileNav';
 
 const Header = () => {
   return(
     <header>
       <Logo />
       <Navbar />
-      <CircleNav />
+      <MobileNav />
     </header>
   )
 }

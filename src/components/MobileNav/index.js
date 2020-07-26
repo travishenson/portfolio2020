@@ -2,21 +2,27 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './style.scss';
 
-const CircleNav = () => {
+const MobileNav = () => {
   const closeNav = () => {
     document.getElementById('navCheckbox').checked = false;
   }
 
   return(
-    <div className='circleNav'>
+    <div className='mobileNav'>
       <label>
         <input type='checkbox' id='navCheckbox'/>
         <span className='menu'>
-          <span className='hamburger'></span>
+          <span className='hamburger'>
+          </span>
         </span>
         <nav>
+          <NavLink to='/' exact className='mobileNavLink' activeClassName='activeNavLink' onClick={closeNav}>
+            Home
+            <span className='underline'></span>
+          </NavLink>
           <NavLink to='/about' exact className='mobileNavLink' activeClassName='activeNavLink' onClick={closeNav}>
             About
+            <span className='underline'></span>
           </NavLink>
           <NavLink to='/work' exact className='mobileNavLink' activeClassName='activeNavLink' onClick={closeNav}>
             Work
@@ -32,4 +38,4 @@ const CircleNav = () => {
   )
 }
 
-export default CircleNav;
+export default MobileNav;

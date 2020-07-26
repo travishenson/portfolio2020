@@ -1,8 +1,15 @@
 header {
   width: 90%;
-  height: 100px;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 25px auto 0 auto;
+  margin: 40px auto 0 auto;
+}
+
+@media (max-width: 768px) {
+  header {
+    height: auto;
+    justify-content: center;
+  }
 }

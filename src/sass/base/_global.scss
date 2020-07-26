@@ -24,6 +24,7 @@ body {
 
 a {
   @include themes.theme-aware('color', 'text-color');
+  @include themes.transition(all 0.5s ease 200ms);
 
   &:hover {
     @include themes.theme-aware('color', 'text-color');
