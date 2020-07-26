@@ -31,11 +31,11 @@ const Topbar = () => {
     if (rootClass === 'theme-light') {
       root.setAttribute('class', 'theme-dark');
       localStorage.setItem('theme', 'dark');
-      setToggleLabel('light');
+      setTimeout(() => { setToggleLabel('light') }, 250);
     } else {
       root.setAttribute('class', 'theme-light');
       localStorage.setItem('theme', 'light');
-      setToggleLabel('dark');
+      setTimeout(() => { setToggleLabel('dark') }, 250);
     }
   }
 
