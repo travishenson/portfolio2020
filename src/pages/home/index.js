@@ -12,7 +12,7 @@ const Home = () => {
         <meta name='keywords' content='' />
       </Helmet>
       <div>
-        <div className='fadeIn'>
+        {/* <div className='fadeIn'>
           <h1>Hi, my name's <span className='blueText'>Travis Henson</span>.</h1>
           <h2 id='intro'>I'm a <span className='blueText'>JavaScript developer</span> currently living in Fairbanks, Alaska.</h2>
         </div>
@@ -25,7 +25,7 @@ const Home = () => {
               <span className='underline blueText'></span>
             </Link>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   )
