@@ -1,10 +1,14 @@
 @use '../../sass/main.scss';
 
 footer {
-  margin-top: auto;
-  padding-top: 1em;
-  width: 100%;
-  height: 100px;
-  border-top: 1px solid main.$grey;
+  background: main.$med-blue;
+  bottom: 0;
+  color: main.$white;
+  height: auto;
+  margin: 0 auto;
+  padding: 1em 0;
+  padding-bottom: env(safe-area-inset-bottom, 20px);
+  position: absolute;
   text-align: center;
+  width: 100%;
 }

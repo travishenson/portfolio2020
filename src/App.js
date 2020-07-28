@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.scss';
+import ScrollToTop from './utils/scrollHook';
 
 // Import pages for routing
 import Home from './pages/home';
@@ -18,9 +19,10 @@ const App = () => {
   return (
     <Router>
       <div className='app'>
+        <ScrollToTop />
         <Topbar />
         <Header />
-        {/* <main>
+        <main>
           <Switch>
             <Route exact path='/'>
               <Home />
@@ -36,7 +38,7 @@ const App = () => {
             </Route>
           </Switch>
         </main>
-        <Footer /> */}
+        <Footer />
       </div>
     </Router>
   )

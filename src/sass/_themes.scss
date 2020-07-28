@@ -1,17 +1,17 @@
 @use './base/variables';
 
 $themes: (
-  light: (
-    background-color: variables.$white,
-    text-color: variables.$black,
-    blue-text: variables.$blue,
-    logo-color: variables.$black
-  ),
   dark: (
     background-color: variables.$black,
     text-color: variables.$white,
     blue-text: variables.$light-blue,
     logo-color: variables.$white
+  ),
+  light: (
+    background-color: variables.$white,
+    text-color: variables.$black,
+    blue-text: variables.$blue,
+    logo-color: variables.$black
   )
 );
 

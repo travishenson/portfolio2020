@@ -1,14 +1,18 @@
 /* Font Stack */
-@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&display=swap');
 
-$brand-font: 'Jost', sans-serif;
+$primary-font: 'Catamaran', sans-serif;
+$secondary-font: 'Mulish', sans-serif;
 
 /* Colors */
-$light-blue: #5CB8FF;
 $blue: #0076cf;
-$med-blue: #004b87;
 $dark-blue: #002e5d;
+$light-blue: #5CB8FF;
+$med-blue: #004b87;
+
 $grey: #5b6770;
 $dark-grey: #25282a;
+
 $black: #202124;
 $white: #fafafa;

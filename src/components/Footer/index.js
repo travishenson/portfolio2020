@@ -4,8 +4,8 @@ import './style.scss';
 
 const Footer = () => {
   return (
-    <footer>   
-      © 2020 Travis Henson
+    <footer>
+      <p>© 2020 Travis Henson</p>
     </footer>
   )
 };

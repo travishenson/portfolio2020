@@ -1,83 +1,155 @@
 @use '../../sass/main.scss';
 
-.home {
-  height: calc(100vh - 200px);
-  max-height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.home-first {
+  padding: 50px 0px;
+  width: 100vw;
 
-  h1 {
-    font-size: 48px;
-    opacity: 0;
-    animation: fadeIn 0.75s ease-out forwards;
+  * {
+    margin-bottom: 25px;
   }
-  
-  h2 {
-    font-size: 36px;
-    line-height: 135%;
-    opacity: 0;
-    animation: fadeIn 0.75s ease-out forwards;
-    animation-delay: 0.5s;
+
+  .inner-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
-  
+
   p {
-    font-size: 20px;
-    line-height: 150%;
-    opacity: 0;
-    animation: fadeIn 0.75s ease-out forwards;
-    animation-delay: 1s;
-  }
-  
-  .ctaLink {
-    display: inline-block;
-    margin: 2rem 0;
-    font-size: 20px;
-    color: main.$blue;
-    font-weight: 600;
-    opacity: 0;
-    animation: fadeIn 0.75s ease-out forwards;
-    animation-delay: 1.25s;
-  
-    a {
-      text-decoration: none;
-    }
-  
-    .arrow {
-      display: inline-block;
-      margin-right: 10px;
-      transition: all 0.5s;
-    }
-  
-    .underline {
-      display: block;
-      width: 0%;
-      height: 2px;
-      transition: all 0.5s;
-    }
-  
-    &:hover {
-      cursor: pointer;
-  
-      .arrow {
-        transform: translateX(12px);
-        transition: all 0.5s;
-      }
-  
-      .underline {
-        display: block;
-        width: calc(100% - 24px);
-        height: 2px;
-        transform: translateX(26px);
-        transition: all 0.5s;
-      }
-    }
-  }
-
-  // CSS for fade in
-  @keyframes fadeIn {
-    0% { opacity: 0; transform: translateY(250px); }
-    30% { opacity: 0 }
-    100% { opacity: 1; transform: translateY(0px); }
+    font-size: 24px;
   }
 }
+
+.home-second {
+  background: main.$dark-blue;
+  color: main.$white;
+  padding: 25px 0;
+  width: 100vw;
+
+  h2 {
+    font-size: 16px;
+    font-weight: 200;
+    letter-spacing: 1.5px;
+    margin-bottom: 15px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .section-underline {
+    background: main.$white;
+    display: block;
+    height: 1px;
+    margin: 0 auto 25px auto;
+    max-width: 450px;
+    width: 100%;
+  }
+
+  .featured-projects-grid {
+    margin: 0 auto;
+    width: 95%;
+
+    :nth-child(even) {
+      align-items: flex-end;
+      flex-wrap: wrap-reverse;
+    }
+  }
+
+  .featured-project {
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 50px;
+
+    img {
+      margin: 0 auto;
+    }
+  }
+
+  .featured-project-description {
+    margin: 0 auto;
+  }
+
+  p {
+    text-align: center;
+  }
+}
+
+
+
+// .home {
+//   h1 {
+//     font-size: 54px;
+//     opacity: 0;
+//     animation: fadeIn 0.75s ease-out forwards;
+//     border: 1px solid red;
+//   }
+  
+//   h2 {
+//     font-size: 28px;
+//     line-height: 135%;
+//     opacity: 0;
+//     animation: fadeIn 0.75s ease-out forwards;
+//     animation-delay: 0.5s;
+//     border: 1px solid red;
+//   }
+  
+//   p {
+//     font-size: 28px;
+//     line-height: 150%;
+//     opacity: 0;
+//     animation: fadeIn 0.75s ease-out forwards;
+//     animation-delay: 1s;
+//   }
+  
+//   .ctaLink {
+//     display: inline-block;
+//     margin: 2rem 0;
+//     font-size: 20px;
+//     color: main.$blue;
+//     font-weight: 600;
+//     opacity: 0;
+//     animation: fadeIn 0.75s ease-out forwards;
+//     animation-delay: 1.25s;
+  
+//     a {
+//       text-decoration: none;
+//     }
+  
+//     .arrow {
+//       display: inline-block;
+//       margin-right: 10px;
+//       transition: all 0.5s;
+//     }
+  
+//     .underline {
+//       display: block;
+//       width: 0%;
+//       height: 2px;
+//       transition: all 0.5s;
+//     }
+  
+//     &:hover {
+//       cursor: pointer;
+  
+//       .arrow {
+//         transform: translateX(12px);
+//         transition: all 0.5s;
+//       }
+  
+//       .underline {
+//         display: block;
+//         width: calc(100% - 24px);
+//         height: 2px;
+//         transform: translateX(26px);
+//         transition: all 0.5s;
+//       }
+//     }
+//   }
+
+//   // CSS for fade in
+//   @keyframes fadeIn {
+//     0% { opacity: 0; transform: translateY(250px); }
+//     30% { opacity: 0 }
+//     100% { opacity: 1; transform: translateY(0px); }
+//   }
+// }

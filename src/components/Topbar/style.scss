@@ -1,68 +1,69 @@
 @use '../../sass/main.scss';
 
-.topBar {
+.top-bar {
   align-items: center;
   align-content: center;
   background-color: main.$blue;
   color: main.$white;
-  display: flex;
+	display: flex;
   font-size: 14px;
   justify-content: center;
   padding: 5px;
   position: fixed;
   top: 0;
 	width: 100vw;
-}
+	z-index: 2;
 
-.topBar div {
-  display: flex;
-  align-self: center;
-  align-content: center;
+	div {
+		align-content: center;
+		align-self: center;
+		display: flex;
+	}
 }
 
 // Toggle styles
 #switch[type=checkbox]{
 	height: 0;
-  width: 0;
 	visibility: hidden;
+  width: 0;
 }
 
-#switchLabel {
-	cursor: pointer;
-	text-indent: -9999px;
-	width: 24px;
-	height: 12px;
+#switch-label {
 	background: main.$med-blue;
-	display: block;
 	border-radius: 100px;
-  position: relative;
-  -webkit-transition: all 0.5s ease 200ms;
-	-o-transition: all 0.5s ease 200ms;
+	cursor: pointer;
+	display: block;
+	height: 12px;
+	position: relative;
+	text-indent: -9999px;
 	transition: all 0.5s ease 200ms;
+	-o-transition: all 0.5s ease 200ms;
+	-webkit-transition: all 0.5s ease 200ms;
+	width: 24px;
 }
 
-#switchLabel:after {
-	content: '';
-	position: absolute;
-	top: 2px;
-	left: 2px;
-	width: 8px;
-	height: 8px;
+#switch-label:after {
 	background: main.$white;
 	border-radius: 20px;
+	content: '';
+	height: 8px;
+	left: 2px;
+	position: absolute;
+	top: 2px;
+	transition: all 0.5s ease 200ms;
+	-o-transition: all 0.5s ease 200ms;
 	-webkit-transition: all 0.5s ease 200ms;
-	-o-transition: all 0.5s ease 200ms;
-	transition: all 0.5s ease 200ms;
+	width: 8px;
 }
 
-#switch:checked + #switchLabel {
-  -webkit-transition: all 0.5s ease 200ms;
-	-o-transition: all 0.5s ease 200ms;
-	transition: all 0.5s ease 200ms;
+#switch:checked + #switch-label {
 	background: main.$dark-blue;
+	transition: all 0.5s ease 200ms;
+	-o-transition: all 0.5s ease 200ms;
+  -webkit-transition: all 0.5s ease 200ms;
 }
 
-#switch:checked + #switchLabel:after {
+#switch:checked + #switch-label:after {
 	left: calc(100% - 2px);
 	transform: translateX(-100%);
 }

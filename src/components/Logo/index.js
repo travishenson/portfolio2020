@@ -4,7 +4,7 @@ import './style.scss';
 
 const Logo = () => {
   const closeMobileNav = () => {
-    document.getElementById('navCheckbox').checked = false;
+    document.getElementById('nav-checkbox').checked = false;
   }
 
   return (

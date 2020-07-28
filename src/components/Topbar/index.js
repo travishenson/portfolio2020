@@ -40,11 +40,11 @@ const Topbar = () => {
   }
 
   return(
-    <div className='topBar'>
-      <div style={{ marginRight: '2px' }}> Toggle {toggleLabel} mode </div>
+    <div className='top-bar'>
+      <div style={{ marginRight: '2px' }}> Toggle {toggleLabel} mode</div>
       <div>
         <input type='checkbox' id='switch' onClick={toggleMode}/>
-        <label htmlFor='switch' id='switchLabel'></label>
+        <label htmlFor='switch' id='switch-label'></label>
       </div>
     </div>
   )

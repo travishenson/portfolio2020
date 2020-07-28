@@ -1,8 +1,8 @@
 @use '../../sass/main.scss';
 
 .project {
-  padding-bottom: 10vmin;
   margin: 5vmin 0 10vmin 0;
+  padding-bottom: 10vmin;
 
   h2 {
     display: inline-block;
@@ -10,10 +10,10 @@
   }
 
   h3 {
+    color: main.$grey;
     font-weight: 400;
     font-size: 16px;
     margin-top: 0.5em;
-    color: main.$grey;
   }
 }
 
