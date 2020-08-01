@@ -1,0 +1,27 @@
+.about {
+  width: 100vw;
+
+  section {
+    margin: 0 auto;
+    max-width: 750px;
+    padding-bottom: 25px;
+  }
+}
+
+.about-text {
+  line-height: 2;
+  width: 100%;
+
+  .about-intro {
+    font-size: 28px;
+    line-height: 1.5;
+  }
+}
+
+@media(max-width: 768px) {
+  .about-text {
+    .about-intro {
+      font-size: 22px;
+    }
+  }
+}

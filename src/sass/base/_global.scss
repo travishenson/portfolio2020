@@ -49,17 +49,30 @@ img {
   width: auto;
 }
 
-p {
-  font-weight: 400;
-}
-
 nav {
   font-family: variables.$primary-font;
+}
+
+p {
+  font-weight: 400;
 }
 
 // Global use classes
 .blue-text {
   @include themes.theme-aware('color', 'blue-text');
+  @include themes.transition(all 0.5s ease 200ms);
+}
+
+.footer-divider {
+  @include themes.theme-aware('background-color', 'footer-divider');
+  @include themes.transition(all 0.5s ease 200ms);
+  height: 1px;
+  width: 100%;
+}
+
+.footer-logo {
+  @include themes.theme-aware('fill', 'logo-color');
+  @include themes.theme-aware('stroke', 'logo-color');
   @include themes.transition(all 0.5s ease 200ms);
 }
 

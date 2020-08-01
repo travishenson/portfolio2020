@@ -33,8 +33,8 @@ const MobileNav = () => {
             About
             <span className='underline'></span>
           </NavLink>
-          <NavLink to='/work' exact className='mobile-nav-link' activeClassName='active-mobile-nav-link' onClick={closeNav}>
-            Work
+          <NavLink to='/portfolio' exact className='mobile-nav-link' activeClassName='active-mobile-nav-link' onClick={closeNav}>
+            Portfolio
             <span className='underline'></span>
           </NavLink>
           <NavLink to='/resume' exact className='mobile-nav-link' activeClassName='active-mobile-nav-link' onClick={closeNav}>

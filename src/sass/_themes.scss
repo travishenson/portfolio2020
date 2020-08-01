@@ -3,15 +3,17 @@
 $themes: (
   dark: (
     background-color: variables.$black,
-    text-color: variables.$white,
     blue-text: variables.$light-blue,
-    logo-color: variables.$white
+    footer-divider: variables.$grey,
+    logo-color: variables.$white,
+    text-color: variables.$white
   ),
   light: (
     background-color: variables.$white,
-    text-color: variables.$black,
     blue-text: variables.$blue,
-    logo-color: variables.$black
+    footer-divider: variables.$grey,
+    logo-color: variables.$black,
+    text-color: variables.$black
   )
 );
 

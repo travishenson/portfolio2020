@@ -9,8 +9,8 @@ const Navbar = () => {
         About
         <span className='underline'></span>
       </NavLink>
-      <NavLink to='/work' exact className='desktop-nav-link' activeClassName='active-nav-link'>
-        Work
+      <NavLink to='/portfolio' exact className='desktop-nav-link' activeClassName='active-nav-link'>
+        Portfolio
         <span className='underline'></span>
       </NavLink>
       <NavLink to='/resume' exact className='desktop-nav-link' activeClassName='active-nav-link'>

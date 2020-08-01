@@ -1,14 +1,42 @@
 @use '../../sass/main.scss';
 
 footer {
-  background: main.$med-blue;
+  align-items: center;
   bottom: 0;
-  color: main.$white;
-  height: auto;
+  display: flex;
+  flex-direction: column;
+  height: 35vh;
+  justify-content: space-around;
   margin: 0 auto;
-  padding: 1em 0;
-  padding-bottom: env(safe-area-inset-bottom, 20px);
+  padding-bottom: env(safe-area-inset-bottom);
   position: absolute;
   text-align: center;
   width: 100%;
+
+  .footer-partial {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    h4 {
+      font-family: main.$primary-font;
+      font-size: 18px;
+      font-weight: 300;
+      letter-spacing: 2px;
+      margin: auto;
+    }
+  }
+
+  .footer-nav {
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 500px;
+    width: 95%;
+  }
+
+  .copyright {
+    color: main.$grey;
+    font-size: 14px;
+  }
 }
