@@ -7,11 +7,14 @@ import { apiEndpoint } from './utils/prismic';
 import 'regenerator-runtime/runtime'
 
 // Import pages for routing
-import Home from './pages/home';
-import About from './pages/about';
-import Portfolio from './pages/portfolio';
-import Resume from './pages/resume';
-import NotFound from './pages/notFound';
+import { 
+  Home, 
+  About, 
+  Portfolio, 
+  Project, 
+  Resume, 
+  NotFound 
+} from './pages';
 
 // Import universal components
 import Topbar from './components/Topbar';
@@ -37,6 +40,7 @@ const App = () => {
             <Route exact path='/' component={Home} />
             <Route exact path='/about' component={About} />
             <Route exact path='/portfolio' component={Portfolio} />
+            <Route path='/portfolio/:projectId' component={Project} />
             <Route exact path='/resume' component={Resume} />
             <Route path='/*' component={NotFound} />
           </Switch>
