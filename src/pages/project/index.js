@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 
+import './style.scss';
+
 // Prismic CMS imports
 import Prismic from 'prismic-javascript';
 import { Client } from '../../utils/prismic';
@@ -13,25 +15,55 @@ const Project = (props) => {
       const response = await Client.query(
         Prismic.Predicates.at('my.project.uid', props.match.params.projectId)
       );
-      
+
       setProjectData(response.results[0]);
+      document.title = response.results[0].data.project_title[0].text;
     };
 
     fetchData();
   }, []);
 
   return (
-    <div>
+    <div className='project'>
       <Helmet>
-        <title>Resume | Travis Henson</title>
+        <title>Project | Travis Henson</title>
         <meta name='description' content='' />
         <meta name='keywords' content='' />
       </Helmet>
-      {
-        projectData.data ? 
-        <h1>{projectData.data.project_title[0].text}</h1>
+
+      { projectData.data ? 
+        <div>
+          <section className='project-first'>
+            <div className='project-inner'>
+              <div className='project-info'>
+                <h1>{projectData.data.project_title[0].text}</h1>
+                <h2>{projectData.data.overview[0].text}</h2>
+                <div className='project-details'>
+                  <p>Built with: {projectData.data.technologies[0].text}</p>
+                  <p>Project dates: {projectData.data.project_dates[0].text}</p>
+                  <a href={projectData.data.deployed_link.url} target='_blank'>
+                    Deployed with {projectData.data.deployed_platform[0].text}
+                  </a>
+                  <a href={projectData.data.repo_link.url} target='_blank'>
+                    {projectData.data.project_title[0].text} on GitHub
+                  </a>
+                </div>
+              </div>
+              <div className='featured-image'>
+                <img src={projectData.data.cover_image.url} alt={projectData.data.cover_image.alt} />
+              </div>
+            </div>
+          </section>
+          <section className='project-second'>
+            <h2>Screenshots</h2>
+            <img src={projectData.data.project_image_1.url} alt={projectData.data.project_image_1.alt} />
+            <img src={projectData.data.project_image_2.url} alt={projectData.data.project_image_2.alt} />
+          </section>
+        </div>
         :
-        null
+        <div className='project-inner'>
+          <h1>Loading...</h1>
+        </div>
       }
     </div>
   )
