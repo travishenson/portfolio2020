@@ -15,7 +15,8 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       const response = await Client.query(
-        Prismic.Predicates.at('my.project.featured', true)
+        Prismic.Predicates.at('my.project.featured', true),
+        { orderings: '[my.project.project_completion desc]'}
       );
       
       setFeaturedProjects(response.results);
@@ -47,19 +48,27 @@ const Home = () => {
         <div className='featured-projects-grid'>
           {featuredProjects.map((featuredProject, index) => (
             index % 2 === 0 ?
-
+            
             <div className='featured-project' key={featuredProject.id}>
               <img src={featuredProject.data.cover_image.url} alt={featuredProject.data.cover_image.alt} />
               <div>
-                <h3>{featuredProject.data.project_title[0].text}</h3>
                 <p>{featuredProject.data.project_type[0].text}</p>
+                <h3>{featuredProject.data.project_title[0].text}</h3>
+                <h4>{featuredProject.data.featured_tagline[0].text}</h4>
+                <Link to={`/portfolio/${featuredProject.uid}`}>
+                  <button>View Project</button>
+                </Link>
               </div>
             </div>
             :
             <div className='featured-project' key={featuredProject.id}>
               <div>
-                <h3>{featuredProject.data.project_title[0].text}</h3>
                 <p>{featuredProject.data.project_type[0].text}</p>
+                <h3>{featuredProject.data.project_title[0].text}</h3>
+                <h4>{featuredProject.data.featured_tagline[0].text}</h4>
+                <Link to={`/portfolio/${featuredProject.uid}`}>
+                  <button>View Project</button>
+                </Link>
               </div>
               <img src={featuredProject.data.cover_image.url} alt={featuredProject.data.cover_image.alt} />
             </div>

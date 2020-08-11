@@ -14,7 +14,8 @@ const Portfolio = ({ match }) => {
   useEffect(() => {
     const fetchData = async () => {
       const response = await Client.query(
-        Prismic.Predicates.at('document.type', 'project')
+        Prismic.Predicates.at('document.type', 'project'),
+        { orderings: '[my.project.project_completion desc]'}
       );
       
       setProjects(response.results);
