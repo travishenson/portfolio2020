@@ -49,6 +49,12 @@ img {
   width: auto;
 }
 
+form, input, textarea {
+  @include themes.theme-aware('color', 'text-color');
+  @include themes.transition(color 0.5s ease 200ms);
+  font-family: variables.$primary-font;
+}
+
 nav {
   font-family: variables.$primary-font;
 }
@@ -74,6 +80,12 @@ p {
   @include themes.theme-aware('fill', 'logo-color');
   @include themes.theme-aware('stroke', 'logo-color');
   @include themes.transition(all 0.5s ease 200ms);
+}
+
+.home-second {
+  a, a:hover {
+    color: variables.$white;
+  }
 }
 
 .inner-container {

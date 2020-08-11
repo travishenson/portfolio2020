@@ -3,7 +3,27 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import './style.scss';
 
+import ContactForm from '../../components/ContactForm';
+
+// Prismic CMS imports
+import Prismic from 'prismic-javascript';
+import { Client } from '../../utils/prismic';
+
 const Home = () => {
+  const [featuredProjects, setFeaturedProjects] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await Client.query(
+        Prismic.Predicates.at('my.project.featured', true)
+      );
+      
+      setFeaturedProjects(response.results);
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <div className='home'>
       <Helmet>
@@ -11,6 +31,7 @@ const Home = () => {
         <meta name='description' content='' />
         <meta name='keywords' content='' />
       </Helmet>
+
       <section className='home-first'>
         <div className='inner-container'>
           <h1>Hi, my name's <span className='blue-text'>Travis Henson</span>.</h1>
@@ -24,34 +45,36 @@ const Home = () => {
           <div className='section-underline'></div>
         </div>
         <div className='featured-projects-grid'>
-          <div className='featured-project'>
-            <img src='https://via.placeholder.com/750x300' className='featured-project-image' />
-            <div className='featured-project-description'>
-              <h3>Side Mine / Pirate's Plunder</h3>
-              <p></p>
+          {featuredProjects.map((featuredProject, index) => (
+            index % 2 === 0 ?
+
+            <div className='featured-project' key={featuredProject.id}>
+              <img src={featuredProject.data.cover_image.url} alt={featuredProject.data.cover_image.alt} />
+              <div>
+                <h3>{featuredProject.data.project_title[0].text}</h3>
+                <p>{featuredProject.data.project_type[0].text}</p>
+              </div>
             </div>
-          </div>
-          <div className='featured-project'>
-            <div className='featured-project-description'>
-              <h3>TwitchReact</h3>
-              <p></p>
+            :
+            <div className='featured-project' key={featuredProject.id}>
+              <div>
+                <h3>{featuredProject.data.project_title[0].text}</h3>
+                <p>{featuredProject.data.project_type[0].text}</p>
+              </div>
+              <img src={featuredProject.data.cover_image.url} alt={featuredProject.data.cover_image.alt} />
             </div>
-            <img src='https://via.placeholder.com/750x300' className='featured-project-image' />
-          </div>
+          ))}
         </div>
         <div className='inner-container'>
-          <p>Want to see more projects? Check them out on my <Link to='/work'>work page</Link>.</p>
+          <p>Want to see more projects? Check them out on my <Link to='/portfolio'>portfolio page</Link>.</p>
         </div>
       </section>
-      <div>
-        
-        {/* <div className='ctaLink'>
-          <Link to='/work'>
-            <span className='arrow blueText'>&gt;</span> View My Work
-            <span className='underline blueText'></span>
-          </Link>
-        </div> */}
-      </div>
+      <section className='home-third'>
+        <h2>Let's get in touch.</h2>
+        <p>Want to discuss an opportunity? Have a question about my work?</p>
+        <p>Fill out the form below, and I'll get back to you soon!</p>
+        <ContactForm />
+      </section>
     </div>
   )
 };

@@ -43,6 +43,10 @@
     text-transform: uppercase;
   }
 
+  p {
+    text-align: center;
+  }
+
   .section-underline {
     background: main.$white;
     display: block;
@@ -67,22 +71,30 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 50px;
+    margin: 0 auto 50px auto;
 
-    img {
+    div {
       margin: 0 auto;
     }
-  }
 
-  .featured-project-description {
-    margin: 0 auto;
+    h3 {
+      align-self: center;
+      font-size: 60px;
+      margin: 0 auto;
+    }
+
+    img {
+      height: 300px;
+      object-fit: cover;
+      width: 750px;
+    }
   }
+}
+
+.home-third {
+  text-align: center;
 
   p {
-    text-align: center;
-
-    a {
-      color: main.$white;
-    }
+    font-size: 16px;
   }
 }

@@ -7,16 +7,21 @@ const Footer = () => {
   return (
     <footer>
       <div className='footer-divider'></div>
-      <div className='footer-partial'>
+      <div className='footer-main'>
         <FooterLogo />
-        <h4>Get in Touch</h4>
+        <nav className='footer-nav'>
+          <div>
+            <a href='https://github.com/travishenson' target='_blank'>GitHub</a>
+          </div>
+          <div>
+            <a href='mailto:hello@travishenson.com' target='_blank'>Email</a>
+          </div>
+          <div>
+            <a href='https://linkedin.com/in/travisghenson' target='_blank'>LinkedIn</a>
+          </div>
+        </nav>
+        <p className='copyright'>Copyright © 2020 Travis Henson.</p>
       </div>
-      <nav className='footer-nav'>
-        <a href='https://github.com/travishenson' target='_blank'>GitHub</a>
-        <a href='mailto:hello@travishenson.com' target='_blank'>Email</a>
-        <a href='https://linkedin.com/in/travisghenson' target='_blank'>LinkedIn</a>
-      </nav>
-      <p className='copyright'>© 2020 Travis Henson</p>
     </footer>
   )
 };

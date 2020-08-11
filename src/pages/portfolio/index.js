@@ -20,27 +20,33 @@ const Portfolio = ({ match }) => {
       setProjects(response.results);
     };
 
-    console.log(match)
     fetchData();
   }, []);
 
   return (
     <div className='portfolio'>
       <Helmet>
-        <title>Work | Travis Henson</title>
+        <title>Portfolio | Travis Henson</title>
         <meta name='description' content='' />
         <meta name='keywords' content='' />
       </Helmet>
-      <section>
-        {projects.map(project => (
-          <ProjectTile 
-            match={match}
-            slug={project.uid}
-            title={project.data.project_title[0].text}
-            key={project.id}
-          />
-        ))}
-      </section>
+
+      { projects.length > 0 ? 
+        <section>
+          {projects.map(project => (
+            <ProjectTile 
+              match={match}
+              slug={project.uid}
+              title={project.data.project_title[0].text}
+              key={project.id}
+            />
+          ))}
+        </section>
+        :
+        <div className='project-inner'>
+          <h1>Loading...</h1>
+        </div>
+      }
     </div>
   )
 };
