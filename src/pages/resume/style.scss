@@ -1,0 +1,58 @@
+@use '../../sass/main.scss';
+
+.resume {
+  max-width: 750px;
+  width: 95vw;
+
+  h1 {
+    text-align: center;
+  }
+
+  h2, h3 {
+    margin: 0;
+  }
+
+  h3 {
+    font-size: 22px;
+    font-weight: 300;
+  }
+
+  hr {
+    margin: 25px auto;
+  }
+}
+
+.resume-skills {
+  text-align: left;
+  width: 100%;
+
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    div {
+      width: 50%;
+    }
+  }
+}
+
+.resume-experience, .resume-education {
+  div {
+    margin: 25px auto;
+  }
+
+  p {
+    color: main.$grey;
+    font-size: 16px;
+    margin: 0;
+  }
+
+  ul {
+    max-width: 600px;
+
+    li {
+      margin: 15px 0;
+    }
+  }
+}
