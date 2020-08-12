@@ -36,6 +36,7 @@
     "@babel/preset-env": "^7.11.0",
     "@babel/preset-react": "^7.10.4",
     "dotenv": "^8.2.0",
+    "parcel-bundler": "^1.12.4",
     "sass": "^1.26.10"
   }
 }
