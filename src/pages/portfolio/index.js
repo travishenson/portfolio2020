@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
-
-import ProjectTile from '../../components/ProjectTile';
 import './style.scss';
+
+import ProjectGrid from '../../components/ProjectGrid';
 
 // Prismic CMS imports
 import Prismic from 'prismic-javascript';
@@ -33,16 +33,7 @@ const Portfolio = ({ match }) => {
       </Helmet>
 
       { projects.length > 0 ? 
-        <section>
-          {projects.map(project => (
-            <ProjectTile 
-              match={match}
-              slug={project.uid}
-              title={project.data.project_title[0].text}
-              key={project.id}
-            />
-          ))}
-        </section>
+        <ProjectGrid projects={projects} />
         :
         <div className='project-inner'>
           <h1>Loading...</h1>

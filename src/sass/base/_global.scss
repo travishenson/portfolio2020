@@ -73,7 +73,7 @@ p {
   @include themes.theme-aware('background-color', 'footer-divider');
   @include themes.transition(all 0.5s ease 200ms);
   height: 1px;
-  width: 100%;
+  width: 85%;
 }
 
 .footer-logo {

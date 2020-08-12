@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet';
 import './style.scss';
 
 import ContactForm from '../../components/ContactForm';
+import ProjectGrid from '../../components/ProjectGrid';
 
 // Prismic CMS imports
 import Prismic from 'prismic-javascript';
@@ -45,35 +46,7 @@ const Home = () => {
           <h2>Featured Work</h2>
           <div className='section-underline'></div>
         </div>
-        <div className='featured-projects-grid'>
-          {featuredProjects.map((featuredProject, index) => (
-            index % 2 === 0 ?
-            
-            <div className='featured-project' key={featuredProject.id}>
-              <img src={featuredProject.data.cover_image.url} alt={featuredProject.data.cover_image.alt} />
-              <div>
-                <p>{featuredProject.data.project_type[0].text}</p>
-                <h3>{featuredProject.data.project_title[0].text}</h3>
-                <h4>{featuredProject.data.featured_tagline[0].text}</h4>
-                <Link to={`/portfolio/${featuredProject.uid}`}>
-                  <button>View Project</button>
-                </Link>
-              </div>
-            </div>
-            :
-            <div className='featured-project' key={featuredProject.id}>
-              <div>
-                <p>{featuredProject.data.project_type[0].text}</p>
-                <h3>{featuredProject.data.project_title[0].text}</h3>
-                <h4>{featuredProject.data.featured_tagline[0].text}</h4>
-                <Link to={`/portfolio/${featuredProject.uid}`}>
-                  <button>View Project</button>
-                </Link>
-              </div>
-              <img src={featuredProject.data.cover_image.url} alt={featuredProject.data.cover_image.alt} />
-            </div>
-          ))}
-        </div>
+        <ProjectGrid projects={featuredProjects} />
         <div className='inner-container'>
           <p>Want to see more projects? Check them out on my <Link to='/portfolio'>portfolio page</Link>.</p>
         </div>

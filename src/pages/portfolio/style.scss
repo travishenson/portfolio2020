@@ -1,0 +1,17 @@
+.portfolio {
+  margin-top: 25px;
+  width: 100vw;
+}
+
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  width: 95%;
+
+  :nth-child(even) {
+    align-items: flex-end;
+    flex-wrap: wrap-reverse;
+  }
+}
