@@ -3,6 +3,8 @@ import { Helmet } from 'react-helmet';
 
 import './style.scss';
 
+import Loading from '../../components/Loading';
+
 // Prismic CMS imports
 import Prismic from 'prismic-javascript';
 import { Client } from '../../utils/prismic';
@@ -61,9 +63,7 @@ const Project = (props) => {
           </section>
         </div>
         :
-        <div className='project-inner'>
-          <h1>Loading...</h1>
-        </div>
+        <Loading />
       }
     </div>
   )

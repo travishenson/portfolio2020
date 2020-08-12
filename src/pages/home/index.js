@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet';
 import './style.scss';
 
 import ContactForm from '../../components/ContactForm';
+import Loading from '../../components/Loading';
 import ProjectGrid from '../../components/ProjectGrid';
 
 // Prismic CMS imports
@@ -46,7 +47,11 @@ const Home = () => {
           <h2>Featured Work</h2>
           <div className='section-underline'></div>
         </div>
-        <ProjectGrid projects={featuredProjects} />
+        { featuredProjects.length > 0 ?
+          <ProjectGrid projects={featuredProjects} />
+          :
+          <Loading />
+        }
         <div className='inner-container'>
           <p>Want to see more projects? Check them out on my <Link to='/portfolio'>portfolio page</Link>.</p>
         </div>

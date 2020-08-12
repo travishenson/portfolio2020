@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import './style.scss';
 
+import Loading from '../../components/Loading';
 import ProjectGrid from '../../components/ProjectGrid';
 
 // Prismic CMS imports
@@ -35,9 +36,7 @@ const Portfolio = ({ match }) => {
       { projects.length > 0 ? 
         <ProjectGrid projects={projects} />
         :
-        <div className='project-inner'>
-          <h1>Loading...</h1>
-        </div>
+        <Loading />
       }
     </div>
   )
