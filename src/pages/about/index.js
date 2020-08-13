@@ -8,8 +8,7 @@ const About = () => {
     <div className='about'>
       <Helmet>
         <title>About | Travis Henson</title>
-        <meta name='description' content='' />
-        <meta name='keywords' content='' />
+        <meta name='description' content={'My name\'s Travis Henson, and I\'m a full-stack JavaScript developer living in Fairbanks, Alaska. Here is a little bit more about me.'} />
       </Helmet>
       <section className='about-first'>
         <div className='inner-container'>

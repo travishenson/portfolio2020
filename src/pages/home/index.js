@@ -31,8 +31,7 @@ const Home = () => {
     <div className='home'>
       <Helmet>
         <title>Travis Henson | JavaScript Developer</title>
-        <meta name='description' content='' />
-        <meta name='keywords' content='' />
+        <meta name='description' content={'I\'m a JavaScript developer currently living in Fairbanks, Alaska. I love building clean and easy-to-use React apps.'} />
       </Helmet>
 
       <section className='home-first'>

@@ -29,8 +29,7 @@ const Portfolio = ({ match }) => {
     <div className='portfolio'>
       <Helmet>
         <title>Portfolio | Travis Henson</title>
-        <meta name='description' content='' />
-        <meta name='keywords' content='' />
+        <meta name='description' content='The portfolio of Travis Henson, a JavaScript web developer based in Fairbanks, Alaska.' />
       </Helmet>
 
       { projects.length > 0 ? 

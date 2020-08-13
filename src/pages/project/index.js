@@ -29,12 +29,15 @@ const Project = (props) => {
     <div className='project'>
       <Helmet>
         <title>Project | Travis Henson</title>
-        <meta name='description' content='' />
-        <meta name='keywords' content='' />
       </Helmet>
 
       { projectData.data ? 
         <div>
+          <Helmet>
+            <title>Project | Travis Henson</title>
+            <meta name='description' content={projectData.data.overview[0].text} />
+            <meta name='keywords' content='' />
+          </Helmet>
           <section className='project-first'>
             <div className='project-inner'>
               <div className='project-info'>
@@ -43,10 +46,10 @@ const Project = (props) => {
                 <div className='project-details'>
                   <p>Built with: {projectData.data.technologies[0].text}</p>
                   <p>Project dates: {projectData.data.project_dates[0].text}</p>
-                  <a href={projectData.data.deployed_link.url} target='_blank'>
+                  <a href={projectData.data.deployed_link.url} target='_blank' rel='noreferrer'>
                     Deployed with {projectData.data.deployed_platform[0].text}
                   </a>
-                  <a href={projectData.data.repo_link.url} target='_blank'>
+                  <a href={projectData.data.repo_link.url} target='_blank' rel='noreferrer'>
                     {projectData.data.project_title[0].text} on GitHub
                   </a>
                 </div>

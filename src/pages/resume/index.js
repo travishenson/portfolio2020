@@ -8,8 +8,7 @@ const Resume = () => {
     <div className='resume'>
       <Helmet>
         <title>Resume | Travis Henson</title>
-        <meta name='description' content='' />
-        <meta name='keywords' content='' />
+        <meta name='description' content='My name is Travis Henson, a full-stack JavaScript developer currently living in Fairbanks, Alaska. I love building clean and easy-to-use React apps, and I am always wanting to learn new and exciting things.' />
       </Helmet>
       <h1>Resume</h1>
       <section className='resume-intro'>
@@ -20,7 +19,7 @@ const Resume = () => {
         <hr />
         <h2>Experience</h2>
         <div className='experience-entry'>
-          <h3>Web Template Developer - <a href='https://withkoji.com/~travishenson' target='_blank'>Koji</a></h3>
+          <h3>Web Template Developer - <a href='https://withkoji.com/~travishenson' target='_blank' rel='noreferrer'>Koji</a></h3>
           <p>Freelance: February 2020 - June 2020</p>
           <ul>
             <li>Fulfilled commissioned templates for Koji users to customize JavaScript apps/games via Visual Customization Controls</li>
