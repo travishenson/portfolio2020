@@ -37,6 +37,7 @@
     "@babel/preset-react": "^7.10.4",
     "dotenv": "^8.2.0",
     "parcel-bundler": "^1.12.4",
+    "parcel-plugin-compress": "^2.0.2",
     "sass": "^1.26.10"
   }
 }
