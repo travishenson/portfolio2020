@@ -22,7 +22,7 @@ body {
   overflow-x: hidden;
 }
 
-a {
+a:not(.mobile-nav-link) {
   @include themes.theme-aware('color', 'text-color');
   @include themes.transition(all 0.5s ease 200ms);
 
