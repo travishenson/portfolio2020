@@ -2,6 +2,7 @@
 
 .projects-grid {
   margin: 0 auto;
+  max-width: 1200px;
   width: 95%;
 
   :nth-child(even) {
@@ -28,7 +29,7 @@
     text-align: left;
 
     button {
-      background: none;
+      background: main.$blue;
       border: 2px solid main.$blue;
       font-size: 18px;
       height: 50px;
@@ -41,7 +42,7 @@
       }
 
       &:hover {
-        background: main.$blue;
+        background: main.$med-blue;
         cursor: pointer;
       }
     }
