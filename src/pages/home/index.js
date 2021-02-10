@@ -38,7 +38,7 @@ const Home = () => {
         <div className='inner-container'>
           <h1>Hi, my name's <span className='blue-text'>Travis Henson</span>.</h1>
           <h2>I'm a <span className='blue-text'>JavaScript developer</span> currently living in Fairbanks, Alaska. I love building clean and easy-to-use <span className='blue-text'>React apps</span>, and I'm <span className='blue-text'>always wanting to learn</span> new and exciting things.</h2>
-          <p>I'm currently seeking full-time employment as a JavaScript developer, either remotely or in the Fairbanks area.</p>
+          <p>I'm currently seeking full-time employment as a JavaScript developer.</p>
         </div>
       </section>
       <section className='home-second'>
